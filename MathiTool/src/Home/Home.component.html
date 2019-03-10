@@ -1,0 +1,36 @@
+
+<div  style="position: absolute !important;width:60% !important;top:10%;">
+    <span>Please paste all US/Defects below</span>
+  <mat-form-field  style="height:500px; width:100% !important;" >
+
+    <textarea style=" height: 500px;
+    color: black;
+    background-color: beige;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 100%;
+" matInput placeholder="Please paste here" [(ngModel)]="totalText"></textarea>
+
+
+  </mat-form-field>
+</div>
+<div style="position: absolute;width:30%;top:14%;left:70%">
+  <mat-form-field >
+      <input matInput placeholder="Total Count" [(ngModel)]="totalCount" disabled>
+  </mat-form-field>
+</div>
+<div style="position: absolute;width:30%;top:30%;left:70%">
+  <mat-form-field >
+      <input matInput placeholder="User Story" [(ngModel)]="userStory" disabled>
+  </mat-form-field>
+</div>
+<div style="position: absolute;width:30%;top:50%;left:70%">
+  <mat-form-field >
+      <input matInput placeholder="Defect" [(ngModel)]="defect" disabled>
+  </mat-form-field>
+</div>
+<div style="position: absolute;width:30%;top:70%;left:70%">
+<button mat-raised-button  type="button" style="background:darkblue;color: aliceblue" (click)='handleClick(totalText)'>Submit to Get count</button>
+</div>
+
+
