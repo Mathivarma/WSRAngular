@@ -1,4 +1,4 @@
-
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -17,13 +17,28 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 // import { HttpModule } from '@angular/http'
 import { HttpClientModule  } from  '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { NextPageComponent } from '../NextPage/NextPage.component';
+const routes: Routes = [
+  {
+    path:'Home',
+    component:HomeComponent},
+    {
+      path: 'GOT',
+      component: NextPageComponent
+   
+    },
+    {
+      path: '',
+     redirectTo:'/Home',
+     pathMatch:'full'
+    }]
 
 @NgModule({
   declarations: [
-    AppComponent,HomeComponent
+    AppComponent,HomeComponent,NextPageComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,FormsModule,BrowserAnimationsModule,MatInputModule,MatFormFieldModule,
+    RouterModule.forRoot(routes),BrowserModule,HttpClientModule,FormsModule,BrowserAnimationsModule,MatInputModule,MatFormFieldModule,
     NoopAnimationsModule,MatButtonModule, MatCheckboxModule,MatIconModule,MatListModule, MatSidenavModule, MatToolbarModule
   ],
   exports: [MatButtonModule, MatCheckboxModule],
@@ -31,3 +46,6 @@ import { BrowserModule } from '@angular/platform-browser';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+

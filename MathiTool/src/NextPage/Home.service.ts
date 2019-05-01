@@ -1,21 +1,20 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { Counter } from './model/Counter';
-const ParseHeaders = {
-    headers: new HttpHeaders({
-     'Content-Type'  : 'application/x-www-form-urlencoded'
-    })
-   };
+// import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { HttpHeaders } from '@angular/common/http';
+// import { Observable } from 'rxjs';
+// import { catchError } from 'rxjs/operators';
 
-@Injectable()
-export class HomeService {
-     url = "http://localhost:9090/WsrCount";
-    constructor(private http:HttpClient) { }
+// const httpOptions = {
+//     headers: new HttpHeaders({
+//       'Content-Type':  'application/json',
+//     })
+//   };
+// @Injectable()
+// export class HomeService {
+//      url = "api/books";
+//     constructor(private http:HttpClient) { }
     
-   
+
    /* addBookWithObservable(book:Book): Observable<Book> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
             let options = new RequestOptions({ headers: headers });
@@ -42,15 +41,8 @@ export class HomeService {
         console.error(error.message || error);
         return Promise.reject(error.message || error);
         }*/
-        addHero (hero: string): Observable<Counter> {
-
-           
-           return this.http.post<Counter>(this.url, hero, ParseHeaders);
-          
-           
-
+        // addHero (hero: string): Observable<string> {
+        //     return this.http.post<string>(this.url, hero, httpOptions);
             
-          }
-       }
-
-       
+        //   }
+        // }

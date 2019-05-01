@@ -1,0 +1,19 @@
+.mat-sidenav-container {
+    background: rgba(0, 0, 0, 0.08);
+  }
+  
+  .blank-grow {
+    flex: 1 1 auto;
+  }
+
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
